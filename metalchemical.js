@@ -1,14 +1,14 @@
+if (!elements) var elements = {};
+
 elements.hydrochloric_acid = {
-    color: "#ffcc00",
+    color: "#99ccff",
     behavior: behaviors.LIQUID,
     category: "liquids",
     state: "liquid",
     density: 1040,
     reactions: {
-        "zinc": { "elem1": "zinc_chloride", "elem2": "hydrogen", "temp1": 0, "temp2": 0 },
-        "magnesium": { "elem1": "magnesium_chloride", "elem2": "hydrogen", "temp1": 0, "temp2": 0 },
-        "chlorine": { "elem1": "hydrochloric_acid", "elem2": "hydrogen", "temp1": 100 },
-        "sodium_chloride": { "elem1": "hydrochloric_acid", "elem2": "sodium_bisulfate", "temp1": 0 }
+        "zinc": { "elem1": "zinc_chloride", "elem2": "hydrogen" },
+        "magnesium": { "elem1": "magnesium_chloride", "elem2": "hydrogen" }
     }
 };
 
@@ -19,58 +19,41 @@ elements.sulfuric_acid = {
     state: "liquid",
     density: 1830,
     reactions: {
-        "zinc": { "elem1": "zinc_sulfate", "elem2": "hydrogen", "temp1": 0, "temp2": 0 },
-        "magnesium": { "elem1": "magnesium_sulfate", "elem2": "hydrogen", "temp1": 0, "temp2": 0 },
-        "sodium_chloride": { "elem1": "hydrochloric_acid", "elem2": "sodium_bisulfate", "temp1": 0 }
-    }
-};
-
-elements.zinc = {
-    color: "#c0c0c0",
-    behavior: behaviors.SOLID,
-    category: "solids",
-    density: 7135,
-    reactions: {
-        "oxygen": { "elem1": "zinc_oxide", "temp1": 200 }
-    }
-};
-
-elements.magnesium = {
-    color: "#b0b0b0",
-    behavior: behaviors.SOLID,
-    category: "solids",
-    density: 1738,
-    reactions: {
-        "oxygen": { "elem1": "magnesium_oxide", "temp1": 0 },
-        "hydrochloric_acid": { "elem1": "magnesium_chloride", "elem2": "hydrogen", "temp1": 0, "temp2": 0 }
+        "zinc": { "elem1": "zinc_sulfate", "elem2": "hydrogen" },
+        "magnesium": { "elem1": "magnesium_sulfate", "elem2": "hydrogen" },
+        "sodium_chloride": { "elem1": "hydrochloric_acid", "elem2": "sodium_bisulfate" }
     }
 };
 
 elements.zinc_chloride = {
-    color: "#e0e0e0",
-    behavior: behaviors.SOLID,
-    category: "compounds",
-    density: 2830
+    color: "#ccccff",
+    behavior: behaviors.POWDER,
+    category: "solids",
+    state: "solid",
+    density: 1360
 };
 
 elements.magnesium_chloride = {
-    color: "#d0d0d0",
-    behavior: behaviors.SOLID,
-    category: "compounds",
-    density: 2320
+    color: "#99bbff",
+    behavior: behaviors.POWDER,
+    category: "solids",
+    state: "solid",
+    density: 2150
 };
 
 elements.zinc_sulfate = {
-    color: "#e5e5e5",
-    behavior: behaviors.SOLID,
-    category: "compounds",
-    density: 3120
+    color: "#eeeeff",
+    behavior: behaviors.POWDER,
+    category: "solids",
+    state: "solid",
+    density: 1980
 };
 
 elements.magnesium_sulfate = {
-    color: "#dddddd",
-    behavior: behaviors.SOLID,
-    category: "compounds",
+    color: "#ddddff",
+    behavior: behaviors.POWDER,
+    category: "solids",
+    state: "solid",
     density: 2660
 };
 
@@ -79,55 +62,14 @@ elements.hydrogen = {
     behavior: behaviors.GAS,
     category: "gases",
     state: "gas",
-    density: 0.08988,
-    reactions: {
-        "chlorine": { "elem1": "hydrochloric_acid", "temp1": 100 }
-    }
-};
-
-elements.oxygen = {
-    color: "#99ccff",
-    behavior: behaviors.GAS,
-    category: "gases",
-    state: "gas",
-    density: 1.429
-};
-
-elements.chlorine = {
-    color: "#66ff66",
-    behavior: behaviors.GAS,
-    category: "gases",
-    state: "gas",
-    density: 3.2
-};
-
-elements.sodium_chloride = {
-    color: "#ffffff",
-    behavior: behaviors.SOLID,
-    category: "compounds",
-    density: 2160,
-    reactions: {
-        "sulfuric_acid": { "elem1": "hydrochloric_acid", "elem2": "sodium_bisulfate", "temp1": 0 }
-    }
+    density: 0.0899
 };
 
 elements.sodium_bisulfate = {
-    color: "#eeeeee",
-    behavior: behaviors.SOLID,
-    category: "compounds",
-    density: 2840
+    color: "#ffcccc",
+    behavior: behaviors.POWDER,
+    category: "solids",
+    state: "solid",
+    density: 1200
 };
 
-elements.magnesium_oxide = {
-    color: "#ffffff",
-    behavior: behaviors.SOLID,
-    category: "compounds",
-    density: 3580
-};
-
-elements.zinc_oxide = {
-    color: "#f5f5f5",
-    behavior: behaviors.SOLID,
-    category: "compounds",
-    density: 5606
-};
