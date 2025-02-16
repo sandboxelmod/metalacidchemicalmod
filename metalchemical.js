@@ -35,7 +35,8 @@ elements.magnesium = {
     category: "solids",
     density: 1738,
     reactions: {
-        "oxygen": { "elem1": "magnesium_oxide", "temp1": 0 }
+        "oxygen": { "elem1": "magnesium_oxide", "temp1": 0 },
+        "hydrochloric_acid": { "elem1": "magnesium_chloride", "elem2": "hydrogen", "temp1": 0, "temp2": 0 }
     }
 };
 
